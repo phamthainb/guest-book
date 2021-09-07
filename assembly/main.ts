@@ -25,6 +25,7 @@ export function getMessages(): PostedMessage[] {
   const numMessages = min(MESSAGE_LIMIT, messages.length);
   const startIndex = messages.length - numMessages;
   const result = new Array<PostedMessage>(numMessages);
+  
   for(let i = 0; i < numMessages; i++) {
     result[i] = messages[i + startIndex];
   }
